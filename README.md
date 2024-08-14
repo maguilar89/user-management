@@ -9,6 +9,11 @@ http://localhost:8080/swagger-ui/index.html#/user-controller/createUser
 
 nota: al final agregué la parte de docker, en caso de usar docker se debn seguir los siguientes pasos 
 
+# se puede levantar la aplicacion siguiente comando 
+- docker compose up
+
+# O puede seguir cada una de las siguientes instrucciones
+
 # Creación de la red para comunicar los dos contenedores
 docker network create mynet
 
@@ -25,7 +30,6 @@ docker build -t user-man-image .
 docker run -p8080:8080 --name user-man-container --network=mynet user-man-image
 
 # Una vez hecho los pasos anteriores, deberíamos ver la aplicación corriendo en el puerto 8080
-
 
 # Nota: dejo el curl del servicio de creacion de usuarios
 
